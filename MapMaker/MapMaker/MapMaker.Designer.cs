@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MapArrayGrid = new System.Windows.Forms.DataGridView();
             this.CurrentMapLabel = new System.Windows.Forms.Label();
             this.ClearButton = new System.Windows.Forms.Button();
             this.Player1SpawnButton = new System.Windows.Forms.Button();
@@ -54,16 +53,8 @@
             this.Obstacle4Button = new System.Windows.Forms.Button();
             this.PreviewButton = new System.Windows.Forms.Button();
             this.currentMapDomain = new System.Windows.Forms.DomainUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.MapArrayGrid)).BeginInit();
+            this.MapPanel = new System.Windows.Forms.Panel();
             this.SuspendLayout();
-            // 
-            // MapArrayGrid
-            // 
-            this.MapArrayGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MapArrayGrid.Location = new System.Drawing.Point(12, 12);
-            this.MapArrayGrid.Name = "MapArrayGrid";
-            this.MapArrayGrid.Size = new System.Drawing.Size(527, 319);
-            this.MapArrayGrid.TabIndex = 0;
             // 
             // CurrentMapLabel
             // 
@@ -92,6 +83,7 @@
             this.Player1SpawnButton.TabIndex = 6;
             this.Player1SpawnButton.Text = "P1";
             this.Player1SpawnButton.UseVisualStyleBackColor = true;
+            this.Player1SpawnButton.Click += new System.EventHandler(this.Player1SpawnButton_Click);
             // 
             // label3
             // 
@@ -292,11 +284,22 @@
             this.currentMapDomain.Text = "Map 1";
             this.currentMapDomain.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // MapPanel
+            // 
+            this.MapPanel.Location = new System.Drawing.Point(9, 8);
+            this.MapPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MapPanel.Name = "MapPanel";
+            this.MapPanel.Size = new System.Drawing.Size(540, 337);
+            this.MapPanel.TabIndex = 29;
+            this.MapPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MapPanel_Paint);
+            this.MapPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MapPanel_MouseClick);
+            // 
             // MapMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(755, 520);
+            this.Controls.Add(this.MapPanel);
             this.Controls.Add(this.currentMapDomain);
             this.Controls.Add(this.PreviewButton);
             this.Controls.Add(this.Obstacle5Button);
@@ -322,18 +325,15 @@
             this.Controls.Add(this.Player1SpawnButton);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.CurrentMapLabel);
-            this.Controls.Add(this.MapArrayGrid);
             this.Name = "MapMaker";
             this.Text = "Map Maker";
-            ((System.ComponentModel.ISupportInitialize)(this.MapArrayGrid)).EndInit();
+            this.Load += new System.EventHandler(this.MapMaker_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView MapArrayGrid;
         private System.Windows.Forms.Label CurrentMapLabel;
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.Button Player1SpawnButton;
@@ -359,6 +359,7 @@
         private System.Windows.Forms.Button Obstacle4Button;
         private System.Windows.Forms.Button PreviewButton;
         private System.Windows.Forms.DomainUpDown currentMapDomain;
+        private System.Windows.Forms.Panel MapPanel;
     }
 }
 
