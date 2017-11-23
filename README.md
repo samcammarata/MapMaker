@@ -8,3 +8,7 @@ Added another possible way to save files. Unsure of which would work better sinc
 
 Sophia edit 3 notes (Sophia_Milestone3Again):
 Save file now works properly (it saves information out to a text file). Create new now automatically scrolls to the new map in the domainupdown, and it doesn't just add a 1 to the end of the map name. Still isn't perfect though in the sense that it won't ask the player to save the previous map first. Clear clears player positions, background image, etc. It also resets map name to Map 1, but there's sometimes an error when scrolling up where it remembers previous map names.
+
+
+Sophia edit 4 notes:
+Clear works properly. Added in functionality for "upload background" button. It just shows the file location for whatever image you choose. Still need to figure out how to make a save file dialog work when creating a new map...the way I tried made it crash.
