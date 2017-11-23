@@ -1,0 +1,10 @@
+Player 1 X pos: 0
+Player 1 Y pos: 0
+Player 2 X pos: 0
+Player 2 Y pos: 0
+Player 3 X pos: 0
+Player 3 Y pos: 0
+Player 4 X pos: 0
+Player 4 Y pos: 0
+Background image: 
+Map name: Map 1
