@@ -174,6 +174,7 @@
             this.BackgroundImageUploadButton.TabIndex = 16;
             this.BackgroundImageUploadButton.Text = "Upload";
             this.BackgroundImageUploadButton.UseVisualStyleBackColor = true;
+            this.BackgroundImageUploadButton.Click += new System.EventHandler(this.BackgroundImageUploadButton_Click);
             // 
             // Boss3SpawnButton
             // 
@@ -287,7 +288,7 @@
             // MapPanel
             // 
             this.MapPanel.Location = new System.Drawing.Point(9, 8);
-            this.MapPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MapPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MapPanel.Name = "MapPanel";
             this.MapPanel.Size = new System.Drawing.Size(540, 337);
             this.MapPanel.TabIndex = 29;

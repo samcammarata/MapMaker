@@ -40,18 +40,13 @@ namespace MapMaker
         private void ClearButton_Click(object sender, EventArgs e)
         {
             /*
-             * Changed so that spawn points are all set to 0
-             * There are issues regarding the currentMapDomain though...
-             * Sometimes, you can suddenly go back to previous values you had if you created new files
-             * It doesn't happen every time I try it, though
-             * Been trying to find ways around this but I can't find anything
-             * Tried setting it equal to null, or doing ResetText()
+             * Fixed the clear button for currentMapDomain
              * -Sophia
              */
 
-            // reset the current map domain info. sets back to map 1.
-            // sometimes runs into an error where you can suddenly go back to random numbers? doesnt always happen for me though.
-            // not sure how to fix it
+            // reset the current map domain info. sets back to map 1
+            // fixed so now it works properly
+            currentMapDomain.Items.Clear();
             currentMapDomain.ResetText();
             currentMapDomain.Text = null;
             currentMapDomain.Text = "Map 1";
@@ -148,10 +143,7 @@ namespace MapMaker
         private void CreateNewButton_Click(object sender, EventArgs e)
         {
             /*
-             * Changed the function of the create new button to work better
-             * No longer only adds an "11" to the list that you need to manually scroll to
-             * Once you hit create new, it's the right map number and you are automatically sent to that name in the domainupdown
-             * Can still scroll back
+             * Still running into issue regarding savefiledialog coming up first
              * -Sophia
              */
 
@@ -219,6 +211,34 @@ namespace MapMaker
         private void MapMaker_Load(object sender, EventArgs e)
         {
 
+        }
+
+        // clicking the upload button to upload in a background image
+        private void BackgroundImageUploadButton_Click(object sender, EventArgs e)
+        {
+            /*
+             * User can open various image file types, or any file type, to use as a background image.
+             * The file location is stored in the text box.
+             * -Sophia
+             */
+
+            // open file dialog
+            OpenFileDialog dialog = new OpenFileDialog();
+
+            // what type of files
+            dialog.Filter = "Image Files(*.BMP;*.JPG;*.PNG;*.JPEG) | *.BMP;*.JPG;*.PNG;*.JPEG | All Files (*.*) | *.*"; // this one is png files or all files
+
+            // user can't open more than one file
+            dialog.Multiselect = false; 
+
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                // get file name
+                String path = dialog.FileName;
+                using (StreamReader reader = new StreamReader(new FileStream(path, FileMode.Open), new UTF8Encoding())) ;
+
+                BackgroundImageTextBox.Text = path;
+            }
         }
     }
 }
