@@ -10,3 +10,9 @@ Took info Prof. Kalb put in and began expanding it to cover all four players' ic
 
 Sophia-milestone3 edits:
 Thought about Prof. Kalb's advice on some of the buttons. Fixed the save button; it now writes to a textfile all of the information. Clear and Create New work better now as well.
+
+Sophia edit 4 notes:
+Clear works properly. Added in functionality for "upload background" button. It just shows the file location for whatever image you choose. Still need to figure out how to make a save file dialog work when creating a new map...the way I tried made it crash.
+ 
+Sophia edit 5 notes:
+Added in a save file dialog that comes up when the users tries to clear or create new. Prompts them to go back and save before making changes.
