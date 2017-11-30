@@ -40,38 +40,42 @@ namespace MapMaker
         private void ClearButton_Click(object sender, EventArgs e)
         {
             /*
-             * Fixed the clear button for currentMapDomain
+             * Fixed the clear button for currentMapDomain. 
+             * Added in dialog to ask if user wants to go back and save first.
              * -Sophia
              */
 
-            // reset the current map domain info. sets back to map 1
-            // fixed so now it works properly
-            currentMapDomain.Items.Clear();
-            currentMapDomain.ResetText();
-            currentMapDomain.Text = null;
-            currentMapDomain.Text = "Map 1";
+            // ask user if they want to go back to save first
+            DialogResult dialog = MessageBox.Show("Have you saved the map before clearing?", "Exit", MessageBoxButtons.YesNo);
+
+            // if they don't want to, it automatically clears for them
+            if (dialog == DialogResult.Yes)
+            {
+                // reset the current map domain info. sets back to map 1
+                // fixed so now it works properly
+                currentMapDomain.Items.Clear();
+                currentMapDomain.ResetText();
+                currentMapDomain.Text = null;
+                currentMapDomain.Text = "Map 1";
+
+                // clear background image textbox
+                BackgroundImageTextBox.Clear();
+
+                playerImage = null;
+                MapPanel = null;
+
+                // reset spawn points
+                p1Spawn.X = 0;
+                p1Spawn.Y = 0;
+                p2Spawn.X = 0;
+                p2Spawn.Y = 0;
+                p3Spawn.X = 0;
+                p3Spawn.Y = 0;
+                p4Spawn.X = 0;
+                p4Spawn.Y = 0;
+            }
             
-            // clear background image textbox
-            BackgroundImageTextBox.Clear();
-
-            playerImage = null;
-            MapPanel = null;
-
-            // reset spawn points
-            p1Spawn.X = 0;
-            p1Spawn.Y = 0;
-            p2Spawn.X = 0;
-            p2Spawn.Y = 0;
-            p3Spawn.X = 0;
-            p3Spawn.Y = 0;
-            p4Spawn.X = 0;
-            p4Spawn.Y = 0;
         }
-
-        /*
-         * 10/20 UPDATE:
-         * Two different types of ways to save a file, wasn't sure which would necessarily work better.
-         */
 
         // Click the save button to save the file. Also depends on the array/list/whatever you feel is best.
         // Just edit the information to what you end up naming the array.
@@ -143,32 +147,39 @@ namespace MapMaker
         private void CreateNewButton_Click(object sender, EventArgs e)
         {
             /*
-             * Still running into issue regarding savefiledialog coming up first
+             * Dialog comes up asking if user wants to go back to save first before creating new.
              * -Sophia
              */
 
-            // increment mapNumber
-            mapNumber++;
+            // dialog asking user if they want to go back to save
+            DialogResult dialog = MessageBox.Show("Have you saved the current map?", "Exit", MessageBoxButtons.YesNo);
+            
+            // user has already saved the map, programs creates a new file
+            if(dialog == DialogResult.Yes)
+            {
+                // increment mapNumber
+                mapNumber++;
 
-            // adds in the next value to the map
-            currentMapDomain.Items.Add("Map " + mapNumber);
-            currentMapDomain.DownButton();
+                // adds in the next value to the map
+                currentMapDomain.Items.Add("Map " + mapNumber);
+                currentMapDomain.DownButton();
 
-            // empty each point
-            p1Spawn = Point.Empty;
-            p2Spawn = Point.Empty;
-            p3Spawn = Point.Empty;
-            p4Spawn = Point.Empty;
+                // empty each point
+                p1Spawn = Point.Empty;
+                p2Spawn = Point.Empty;
+                p3Spawn = Point.Empty;
+                p4Spawn = Point.Empty;
 
-            // reset spawn values
-            p1Spawn.X = 0;
-            p1Spawn.Y = 0;
-            p2Spawn.X = 0;
-            p2Spawn.Y = 0;
-            p3Spawn.X = 0;
-            p3Spawn.Y = 0;
-            p4Spawn.X = 0;
-            p4Spawn.Y = 0;
+                // reset spawn values
+                p1Spawn.X = 0;
+                p1Spawn.Y = 0;
+                p2Spawn.X = 0;
+                p2Spawn.Y = 0;
+                p3Spawn.X = 0;
+                p3Spawn.Y = 0;
+                p4Spawn.X = 0;
+                p4Spawn.Y = 0;
+            }
         }
 
         private void MapPanel_MouseClick(object sender, MouseEventArgs e)
