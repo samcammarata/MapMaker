@@ -16,3 +16,6 @@ Clear works properly. Added in functionality for "upload background" button. It 
  
 Sophia edit 5 notes:
 Added in a save file dialog that comes up when the users tries to clear or create new. Prompts them to go back and save before making changes.
+
+Sam - 12/9 edits : 
+Player spawning points are added to the map field properly and move around properly without arbitrarily resetting. Background can now be uploaded and appears in the map field. Began working on the upload button. 
