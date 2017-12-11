@@ -23,3 +23,7 @@ Player spawning points are added to the map field properly and move around prope
 
 Sam - 12/10 edits :
 Resized GUI and Map Field so that size was proportional to 1920x1080 images that Tucker creates for background. Finished upload button (tool uploads saved .txt files). Fixed bug from 12/9 of first click in map field moving p1spawn. 
+
+
+Sam - 12/10 edits 2 :
+Finished adding in code for bosses once art comes in (used placeholder art to make sure everything works properly).
