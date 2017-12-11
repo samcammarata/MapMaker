@@ -1,10 +1,10 @@
-Player 1 X pos: 0
-Player 1 Y pos: 0
-Player 2 X pos: 0
-Player 2 Y pos: 0
-Player 3 X pos: 0
-Player 3 Y pos: 0
-Player 4 X pos: 0
-Player 4 Y pos: 0
-Background image: 
-Map name: Map 1
+Player 1 X pos:82
+Player 1 Y pos:69
+Player 2 X pos:524
+Player 2 Y pos:59
+Player 3 X pos:515
+Player 3 Y pos:281
+Player 4 X pos:82
+Player 4 Y pos:284
+Background image: C:\Users\Sam Camm\Downloads\MapMaker-master (3)\MapMaker-master (3)\MapMaker-master (3)\MapMaker-master\MapMaker\gameScreen480270.png
+Map name: Map1

@@ -45,21 +45,14 @@
             this.Boss2SpawnButton = new System.Windows.Forms.Button();
             this.BossSpawnsLabel = new System.Windows.Forms.Label();
             this.Boss1SpawnButton = new System.Windows.Forms.Button();
-            this.Obstacle3Button = new System.Windows.Forms.Button();
-            this.Obstacle2Button = new System.Windows.Forms.Button();
-            this.ObstaclesLabel = new System.Windows.Forms.Label();
-            this.Obstacle1Button = new System.Windows.Forms.Button();
-            this.Obstacle5Button = new System.Windows.Forms.Button();
-            this.Obstacle4Button = new System.Windows.Forms.Button();
-            this.PreviewButton = new System.Windows.Forms.Button();
-            this.currentMapDomain = new System.Windows.Forms.DomainUpDown();
             this.MapPanel = new System.Windows.Forms.Panel();
+            this.CurrentMapTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // CurrentMapLabel
             // 
             this.CurrentMapLabel.AutoSize = true;
-            this.CurrentMapLabel.Location = new System.Drawing.Point(550, 18);
+            this.CurrentMapLabel.Location = new System.Drawing.Point(654, 9);
             this.CurrentMapLabel.Name = "CurrentMapLabel";
             this.CurrentMapLabel.Size = new System.Drawing.Size(65, 13);
             this.CurrentMapLabel.TabIndex = 1;
@@ -67,7 +60,7 @@
             // 
             // ClearButton
             // 
-            this.ClearButton.Location = new System.Drawing.Point(671, 471);
+            this.ClearButton.Location = new System.Drawing.Point(775, 456);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(74, 35);
             this.ClearButton.TabIndex = 5;
@@ -77,7 +70,7 @@
             // 
             // Player1SpawnButton
             // 
-            this.Player1SpawnButton.Location = new System.Drawing.Point(107, 383);
+            this.Player1SpawnButton.Location = new System.Drawing.Point(95, 411);
             this.Player1SpawnButton.Name = "Player1SpawnButton";
             this.Player1SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Player1SpawnButton.TabIndex = 6;
@@ -88,7 +81,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(24, 395);
+            this.label3.Location = new System.Drawing.Point(12, 423);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 13);
             this.label3.TabIndex = 7;
@@ -96,34 +89,37 @@
             // 
             // Player2SpawnButton
             // 
-            this.Player2SpawnButton.Location = new System.Drawing.Point(162, 383);
+            this.Player2SpawnButton.Location = new System.Drawing.Point(150, 411);
             this.Player2SpawnButton.Name = "Player2SpawnButton";
             this.Player2SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Player2SpawnButton.TabIndex = 8;
             this.Player2SpawnButton.Text = "P2";
             this.Player2SpawnButton.UseVisualStyleBackColor = true;
+            this.Player2SpawnButton.Click += new System.EventHandler(this.Player2SpawnButton_Click);
             // 
             // Player3SpawnButton
             // 
-            this.Player3SpawnButton.Location = new System.Drawing.Point(219, 383);
+            this.Player3SpawnButton.Location = new System.Drawing.Point(207, 411);
             this.Player3SpawnButton.Name = "Player3SpawnButton";
             this.Player3SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Player3SpawnButton.TabIndex = 9;
             this.Player3SpawnButton.Text = "P3";
             this.Player3SpawnButton.UseVisualStyleBackColor = true;
+            this.Player3SpawnButton.Click += new System.EventHandler(this.Player3SpawnButton_Click);
             // 
             // Player4SpawnButton
             // 
-            this.Player4SpawnButton.Location = new System.Drawing.Point(281, 383);
+            this.Player4SpawnButton.Location = new System.Drawing.Point(269, 411);
             this.Player4SpawnButton.Name = "Player4SpawnButton";
             this.Player4SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Player4SpawnButton.TabIndex = 10;
             this.Player4SpawnButton.Text = "P4";
             this.Player4SpawnButton.UseVisualStyleBackColor = true;
+            this.Player4SpawnButton.Click += new System.EventHandler(this.Player4SpawnButton_Click);
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(591, 471);
+            this.SaveButton.Location = new System.Drawing.Point(695, 456);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(74, 35);
             this.SaveButton.TabIndex = 11;
@@ -133,16 +129,17 @@
             // 
             // UploadButton
             // 
-            this.UploadButton.Location = new System.Drawing.Point(431, 469);
+            this.UploadButton.Location = new System.Drawing.Point(535, 454);
             this.UploadButton.Name = "UploadButton";
             this.UploadButton.Size = new System.Drawing.Size(74, 35);
             this.UploadButton.TabIndex = 12;
             this.UploadButton.Text = "Upload";
             this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Click += new System.EventHandler(this.UploadButton_Click);
             // 
             // CreateNewButton
             // 
-            this.CreateNewButton.Location = new System.Drawing.Point(511, 470);
+            this.CreateNewButton.Location = new System.Drawing.Point(615, 455);
             this.CreateNewButton.Name = "CreateNewButton";
             this.CreateNewButton.Size = new System.Drawing.Size(74, 35);
             this.CreateNewButton.TabIndex = 13;
@@ -152,7 +149,7 @@
             // 
             // BackgroundImageTextBox
             // 
-            this.BackgroundImageTextBox.Location = new System.Drawing.Point(127, 351);
+            this.BackgroundImageTextBox.Location = new System.Drawing.Point(115, 379);
             this.BackgroundImageTextBox.Name = "BackgroundImageTextBox";
             this.BackgroundImageTextBox.Size = new System.Drawing.Size(212, 20);
             this.BackgroundImageTextBox.TabIndex = 14;
@@ -160,7 +157,7 @@
             // BackgroundImageLabel
             // 
             this.BackgroundImageLabel.AutoSize = true;
-            this.BackgroundImageLabel.Location = new System.Drawing.Point(24, 354);
+            this.BackgroundImageLabel.Location = new System.Drawing.Point(12, 382);
             this.BackgroundImageLabel.Name = "BackgroundImageLabel";
             this.BackgroundImageLabel.Size = new System.Drawing.Size(97, 13);
             this.BackgroundImageLabel.TabIndex = 15;
@@ -168,7 +165,7 @@
             // 
             // BackgroundImageUploadButton
             // 
-            this.BackgroundImageUploadButton.Location = new System.Drawing.Point(345, 351);
+            this.BackgroundImageUploadButton.Location = new System.Drawing.Point(333, 379);
             this.BackgroundImageUploadButton.Name = "BackgroundImageUploadButton";
             this.BackgroundImageUploadButton.Size = new System.Drawing.Size(74, 20);
             this.BackgroundImageUploadButton.TabIndex = 16;
@@ -178,26 +175,28 @@
             // 
             // Boss3SpawnButton
             // 
-            this.Boss3SpawnButton.Location = new System.Drawing.Point(219, 426);
+            this.Boss3SpawnButton.Location = new System.Drawing.Point(207, 454);
             this.Boss3SpawnButton.Name = "Boss3SpawnButton";
             this.Boss3SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Boss3SpawnButton.TabIndex = 20;
             this.Boss3SpawnButton.Text = "B3";
             this.Boss3SpawnButton.UseVisualStyleBackColor = true;
+            this.Boss3SpawnButton.Click += new System.EventHandler(this.Boss3SpawnButton_Click);
             // 
             // Boss2SpawnButton
             // 
-            this.Boss2SpawnButton.Location = new System.Drawing.Point(162, 426);
+            this.Boss2SpawnButton.Location = new System.Drawing.Point(150, 454);
             this.Boss2SpawnButton.Name = "Boss2SpawnButton";
             this.Boss2SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Boss2SpawnButton.TabIndex = 19;
             this.Boss2SpawnButton.Text = "B2";
             this.Boss2SpawnButton.UseVisualStyleBackColor = true;
+            this.Boss2SpawnButton.Click += new System.EventHandler(this.Boss2SpawnButton_Click);
             // 
             // BossSpawnsLabel
             // 
             this.BossSpawnsLabel.AutoSize = true;
-            this.BossSpawnsLabel.Location = new System.Drawing.Point(24, 438);
+            this.BossSpawnsLabel.Location = new System.Drawing.Point(12, 466);
             this.BossSpawnsLabel.Name = "BossSpawnsLabel";
             this.BossSpawnsLabel.Size = new System.Drawing.Size(71, 13);
             this.BossSpawnsLabel.TabIndex = 18;
@@ -205,110 +204,38 @@
             // 
             // Boss1SpawnButton
             // 
-            this.Boss1SpawnButton.Location = new System.Drawing.Point(107, 426);
+            this.Boss1SpawnButton.Location = new System.Drawing.Point(95, 454);
             this.Boss1SpawnButton.Name = "Boss1SpawnButton";
             this.Boss1SpawnButton.Size = new System.Drawing.Size(38, 37);
             this.Boss1SpawnButton.TabIndex = 17;
             this.Boss1SpawnButton.Text = "B1";
             this.Boss1SpawnButton.UseVisualStyleBackColor = true;
-            // 
-            // Obstacle3Button
-            // 
-            this.Obstacle3Button.Location = new System.Drawing.Point(219, 469);
-            this.Obstacle3Button.Name = "Obstacle3Button";
-            this.Obstacle3Button.Size = new System.Drawing.Size(38, 37);
-            this.Obstacle3Button.TabIndex = 24;
-            this.Obstacle3Button.Text = "O3";
-            this.Obstacle3Button.UseVisualStyleBackColor = true;
-            // 
-            // Obstacle2Button
-            // 
-            this.Obstacle2Button.Location = new System.Drawing.Point(162, 469);
-            this.Obstacle2Button.Name = "Obstacle2Button";
-            this.Obstacle2Button.Size = new System.Drawing.Size(38, 37);
-            this.Obstacle2Button.TabIndex = 23;
-            this.Obstacle2Button.Text = "O2";
-            this.Obstacle2Button.UseVisualStyleBackColor = true;
-            // 
-            // ObstaclesLabel
-            // 
-            this.ObstaclesLabel.AutoSize = true;
-            this.ObstaclesLabel.Location = new System.Drawing.Point(24, 481);
-            this.ObstaclesLabel.Name = "ObstaclesLabel";
-            this.ObstaclesLabel.Size = new System.Drawing.Size(54, 13);
-            this.ObstaclesLabel.TabIndex = 22;
-            this.ObstaclesLabel.Text = "Obstacles";
-            // 
-            // Obstacle1Button
-            // 
-            this.Obstacle1Button.Location = new System.Drawing.Point(107, 469);
-            this.Obstacle1Button.Name = "Obstacle1Button";
-            this.Obstacle1Button.Size = new System.Drawing.Size(38, 37);
-            this.Obstacle1Button.TabIndex = 21;
-            this.Obstacle1Button.Text = "O1";
-            this.Obstacle1Button.UseVisualStyleBackColor = true;
-            // 
-            // Obstacle5Button
-            // 
-            this.Obstacle5Button.Location = new System.Drawing.Point(338, 469);
-            this.Obstacle5Button.Name = "Obstacle5Button";
-            this.Obstacle5Button.Size = new System.Drawing.Size(38, 37);
-            this.Obstacle5Button.TabIndex = 26;
-            this.Obstacle5Button.Text = "O5";
-            this.Obstacle5Button.UseVisualStyleBackColor = true;
-            // 
-            // Obstacle4Button
-            // 
-            this.Obstacle4Button.Location = new System.Drawing.Point(281, 469);
-            this.Obstacle4Button.Name = "Obstacle4Button";
-            this.Obstacle4Button.Size = new System.Drawing.Size(38, 37);
-            this.Obstacle4Button.TabIndex = 25;
-            this.Obstacle4Button.Text = "O4";
-            this.Obstacle4Button.UseVisualStyleBackColor = true;
-            // 
-            // PreviewButton
-            // 
-            this.PreviewButton.Location = new System.Drawing.Point(669, 60);
-            this.PreviewButton.Name = "PreviewButton";
-            this.PreviewButton.Size = new System.Drawing.Size(74, 35);
-            this.PreviewButton.TabIndex = 27;
-            this.PreviewButton.Text = "Preview";
-            this.PreviewButton.UseVisualStyleBackColor = true;
-            // 
-            // currentMapDomain
-            // 
-            this.currentMapDomain.AllowDrop = true;
-            this.currentMapDomain.Location = new System.Drawing.Point(553, 34);
-            this.currentMapDomain.Name = "currentMapDomain";
-            this.currentMapDomain.Size = new System.Drawing.Size(192, 20);
-            this.currentMapDomain.TabIndex = 28;
-            this.currentMapDomain.Text = "Map 1";
-            this.currentMapDomain.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Boss1SpawnButton.Click += new System.EventHandler(this.Boss1SpawnButton_Click);
             // 
             // MapPanel
             // 
             this.MapPanel.Location = new System.Drawing.Point(9, 8);
             this.MapPanel.Margin = new System.Windows.Forms.Padding(2);
             this.MapPanel.Name = "MapPanel";
-            this.MapPanel.Size = new System.Drawing.Size(540, 337);
+            this.MapPanel.Size = new System.Drawing.Size(640, 360);
             this.MapPanel.TabIndex = 29;
             this.MapPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MapPanel_Paint);
             this.MapPanel.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MapPanel_MouseClick);
+            // 
+            // CurrentMapTextBox
+            // 
+            this.CurrentMapTextBox.Location = new System.Drawing.Point(657, 25);
+            this.CurrentMapTextBox.Name = "CurrentMapTextBox";
+            this.CurrentMapTextBox.Size = new System.Drawing.Size(192, 20);
+            this.CurrentMapTextBox.TabIndex = 30;
             // 
             // MapMaker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(755, 520);
+            this.ClientSize = new System.Drawing.Size(855, 499);
+            this.Controls.Add(this.CurrentMapTextBox);
             this.Controls.Add(this.MapPanel);
-            this.Controls.Add(this.currentMapDomain);
-            this.Controls.Add(this.PreviewButton);
-            this.Controls.Add(this.Obstacle5Button);
-            this.Controls.Add(this.Obstacle4Button);
-            this.Controls.Add(this.Obstacle3Button);
-            this.Controls.Add(this.Obstacle2Button);
-            this.Controls.Add(this.ObstaclesLabel);
-            this.Controls.Add(this.Obstacle1Button);
             this.Controls.Add(this.Boss3SpawnButton);
             this.Controls.Add(this.Boss2SpawnButton);
             this.Controls.Add(this.BossSpawnsLabel);
@@ -352,15 +279,8 @@
         private System.Windows.Forms.Button Boss2SpawnButton;
         private System.Windows.Forms.Label BossSpawnsLabel;
         private System.Windows.Forms.Button Boss1SpawnButton;
-        private System.Windows.Forms.Button Obstacle3Button;
-        private System.Windows.Forms.Button Obstacle2Button;
-        private System.Windows.Forms.Label ObstaclesLabel;
-        private System.Windows.Forms.Button Obstacle1Button;
-        private System.Windows.Forms.Button Obstacle5Button;
-        private System.Windows.Forms.Button Obstacle4Button;
-        private System.Windows.Forms.Button PreviewButton;
-        private System.Windows.Forms.DomainUpDown currentMapDomain;
         private System.Windows.Forms.Panel MapPanel;
+        private System.Windows.Forms.TextBox CurrentMapTextBox;
     }
 }
 

@@ -1,0 +1,16 @@
+Player 1 X pos:66
+Player 1 Y pos:47
+Player 2 X pos:493
+Player 2 Y pos:56
+Player 3 X pos:516
+Player 3 Y pos:290
+Player 4 X pos:84
+Player 4 Y pos:304
+Boss 1 X pos:82
+Boss 1 Y pos:178
+Boss 2 X pos:256
+Boss 2 X pos:184
+Boss 3 X pos:414
+Boss 3 X pos:195
+Background image: C:\Users\Sam Camm\Downloads\MapMaker-master (3)\MapMaker-master (3)\MapMaker-master (3)\MapMaker-master\MapMaker\gameScreen480270.png
+Map name: 
