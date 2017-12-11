@@ -27,3 +27,7 @@ Resized GUI and Map Field so that size was proportional to 1920x1080 images that
 
 Sam - 12/10 edits 2 :
 Finished adding in code for bosses once art comes in (used placeholder art to make sure everything works properly).
+
+Sam - 12/10 edits 3 :
+Added missing code for loading boss info back from saved file, and fixed issues with clear button not clearing map field. Clear button requires a click in the map field area to actually clear display. Also an error in reading in background images because file path is different format than lab computers where work was initially done. Needs fixing. 
+NOTE : Sophia updating actual commits to the project for me, since I'm a loser who can't figure out how to do anything but commit zips to master. 
